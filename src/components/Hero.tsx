@@ -14,84 +14,98 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image Container - Hidden on Mobile */}
-      <div className="hidden md:block absolute inset-0 z-0">
-        <img
-          src="/hero-image.png"
-          alt="Professional Tree Care in Kelowna"
-          className="w-full h-full object-cover"
-        />
-        {/* Desktop Gradient Overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)",
-          }}
-        />
-      </div>
-
-      {/* Content Section */}
-      <div className="container mx-auto px-4 z-10">
-        <div className="max-w-3xl">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight text-gray-900">
-            Professional Tree Care Services in Kelowna
-          </h1>
-          <p className="text-lg sm:text-xl mb-8 text-gray-700 leading-relaxed max-w-2xl">
-            Proudly serving Kelowna for over 30 years. Expert tree care services
-            including tree removal, pruning, tree health and safety inspections,
-            and emergency services.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4">
-            <a
-              href="#contact"
-              className="flex items-center justify-center gap-2 bg-green-600 hover:bg-[#FF6A00] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
-            >
-              <Calendar className="w-5 h-5" />
-              Free Estimate
-            </a>
-            <a
-              href="tel:+12504700478"
-              className="flex items-center justify-center gap-2 bg-white hover:bg-[#FF6A00] text-green-800 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-md"
-            >
-              <PhoneCall className="w-5 h-5" />
-              250-470-0478
-            </a>
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile Image Section */}
-      <div className="md:hidden w-full relative mt-8">
-        <div className="aspect-[4/3] w-full overflow-hidden">
+    <>
+      <section className="relative min-h-[70vh] md:min-h-[90vh] flex items-center overflow-hidden bg-white">
+        {/* Background Image Container - Hidden on Mobile */}
+        <div className="hidden md:block absolute inset-0 z-0">
           <img
             src="/hero-image.png"
             alt="Professional Tree Care in Kelowna"
             className="w-full h-full object-cover"
           />
-          {/* Image Overlay Gradient */}
+          {/* Desktop Gradient Overlay */}
           <div
             className="absolute inset-0"
             style={{
               background:
-                "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 1) 100%)",
+                "linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)",
             }}
           />
         </div>
-      </div>
 
-      {/* Animated overlay pattern */}
-      <div className="absolute inset-0 opacity-5 pointer-events-none">
-        <div
-          className="absolute inset-0"
-          style={{
-            backgroundImage: 'url("/pattern.svg")',
-            backgroundSize: "30px 30px",
-            animation: "slide 20s linear infinite",
-          }}
-        />
-      </div>
+        {/* Content Section */}
+        <div className="container mx-auto px-4 z-10">
+          <div className="max-w-3xl">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight text-gray-900">
+              Professional Tree Care Services in Kelowna
+            </h1>
+            <p className="text-lg sm:text-xl mb-8 text-gray-700 leading-relaxed max-w-2xl">
+              Proudly serving Kelowna for over 30 years. Expert tree care
+              services including tree removal, pruning, tree health and safety
+              inspections, and emergency services.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="#contact"
+                className="flex items-center justify-center gap-2 bg-green-600 hover:bg-[#FF6A00] text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+              >
+                <Calendar className="w-5 h-5" />
+                Free Estimate
+              </a>
+              <a
+                href="tel:+12504700478"
+                className="flex items-center justify-center gap-2 bg-white hover:bg-[#FF6A00] text-green-800 hover:text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-md"
+              >
+                <PhoneCall className="w-5 h-5" />
+                250-470-0478
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Animated overlay pattern */}
+        <div className="absolute inset-0 opacity-5 pointer-events-none">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: 'url("/pattern.svg")',
+              backgroundSize: "30px 30px",
+              animation: "slide 20s linear infinite",
+            }}
+          />
+        </div>
+      </section>
+
+      {/* Mobile Image Section - Separate section below hero */}
+      <section className="md:hidden w-full relative">
+        {/* Faded Background Version */}
+        <div className="absolute inset-0 overflow-hidden opacity-10">
+          <img
+            src="/hero-image.png"
+            alt=""
+            className="w-full h-full object-cover"
+          />
+        </div>
+
+        {/* Main Image */}
+        <div className="relative">
+          <div className="aspect-[4/3] w-full overflow-hidden">
+            <img
+              src="/hero-image.png"
+              alt="Professional Tree Care in Kelowna"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Gradient Overlays */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, white 0%, transparent 5%, transparent 95%, white 100%)",
+            }}
+          />
+        </div>
+      </section>
 
       {/* Back to Top Button */}
       <a
@@ -116,6 +130,6 @@ export default function Hero() {
           <path d="M12 19V5M5 12l7-7 7 7" />
         </svg>
       </a>
-    </section>
+    </>
   );
 }
