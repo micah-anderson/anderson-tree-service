@@ -14,42 +14,31 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative h-[90vh] flex items-center overflow-hidden">
-      {/* Background Image Container */}
-      <img
-        src="/hero-image.png"
-        alt="Professional Tree Care in Kelowna"
-        className="absolute inset-0 w-full h-full object-cover"
-        style={{ zIndex: -1 }}
-      />
-
-      {/* Gradient Overlay */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background:
-            "linear-gradient(45deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.85) 40%, rgba(255, 255, 255, 0) 70%)",
-        }}
-      />
-
-      {/* Animated overlay pattern */}
-      <div className="absolute inset-0 opacity-5">
+    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+      {/* Background Image Container - Hidden on Mobile */}
+      <div className="hidden md:block absolute inset-0 z-0">
+        <img
+          src="/hero-image.png"
+          alt="Professional Tree Care in Kelowna"
+          className="w-full h-full object-cover"
+        />
+        {/* Desktop Gradient Overlay */}
         <div
           className="absolute inset-0"
           style={{
-            backgroundImage: 'url("/pattern.svg")',
-            backgroundSize: "30px 30px",
-            animation: "slide 20s linear infinite",
+            background:
+              "linear-gradient(90deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.95) 35%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 100%)",
           }}
         />
       </div>
 
+      {/* Content Section */}
       <div className="container mx-auto px-4 z-10">
         <div className="max-w-3xl">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight text-gray-900">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight text-gray-900">
             Professional Tree Care Services in Kelowna
           </h1>
-          <p className="text-xl mb-8 text-[#181818] leading-relaxed">
+          <p className="text-lg sm:text-xl mb-8 text-gray-700 leading-relaxed max-w-2xl">
             Proudly serving Kelowna for over 30 years. Expert tree care services
             including tree removal, pruning, tree health and safety inspections,
             and emergency services.
@@ -71,6 +60,37 @@ export default function Hero() {
             </a>
           </div>
         </div>
+      </div>
+
+      {/* Mobile Image Section */}
+      <div className="md:hidden w-full relative mt-8">
+        <div className="aspect-[4/3] w-full overflow-hidden">
+          <img
+            src="/hero-image.png"
+            alt="Professional Tree Care in Kelowna"
+            className="w-full h-full object-cover"
+          />
+          {/* Image Overlay Gradient */}
+          <div
+            className="absolute inset-0"
+            style={{
+              background:
+                "linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.1) 70%, rgba(255, 255, 255, 1) 100%)",
+            }}
+          />
+        </div>
+      </div>
+
+      {/* Animated overlay pattern */}
+      <div className="absolute inset-0 opacity-5 pointer-events-none">
+        <div
+          className="absolute inset-0"
+          style={{
+            backgroundImage: 'url("/pattern.svg")',
+            backgroundSize: "30px 30px",
+            animation: "slide 20s linear infinite",
+          }}
+        />
       </div>
 
       {/* Back to Top Button */}

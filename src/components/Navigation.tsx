@@ -28,7 +28,14 @@ export default function Navigation() {
               isScrolled ? "text-gray-900" : "text-gray-900 drop-shadow-md"
             }`}
           >
-            <span className="text-[#FF6A00]">🌲ANDERSON</span> Tree Service
+            <span className="text-[#FF6A00]">🌲ANDERSON</span>{" "}
+            <span
+              className={`${
+                isScrolled ? "text-gray-900" : "md:text-gray-900 text-green-500"
+              } transition-colors duration-300`}
+            >
+              Tree Service
+            </span>
           </a>
 
           {/* Desktop Navigation */}

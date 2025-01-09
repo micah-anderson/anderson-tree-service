@@ -268,6 +268,30 @@ export default function Services() {
           </div>
         </section>
 
+        {/* Feature Image Section - Standalone */}
+        <section className="mb-12 sm:mb-16">
+          <div className="relative aspect-[16/9] sm:aspect-[21/9] rounded-2xl overflow-hidden group">
+            <img
+              src="/Jaden-inside-tree.jpg"
+              alt="Expert arborist examining a hollow tree trunk for safety assessment"
+              className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
+            />
+            {/* Gradient Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
+            {/* Content Overlay */}
+            <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-8 text-white">
+              <h3 className="text-2xl sm:text-3xl font-bold mb-2">
+                Inside the Work: Expert Tree Assessment
+              </h3>
+              <p className="text-sm sm:text-base text-gray-200 max-w-2xl">
+                Our certified arborists go above and beyond, performing thorough
+                internal cavity inspections to ensure the structural integrity
+                and health of your trees.
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Emergency Call-Out */}
         <aside
           className="bg-green-50 p-6 sm:p-8 rounded-2xl text-center"
