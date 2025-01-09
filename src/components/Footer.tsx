@@ -15,7 +15,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-gray-300">
+    <footer className="bg-[#181818] text-white">
       {/* Main Footer */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
@@ -26,7 +26,8 @@ export default function Footer() {
             </h3>
             <p className="text-sm leading-relaxed mb-6">
               Professional tree care services in Kelowna and the Okanagan
-              Valley. Proudly serving our community for over 30 years.
+              Valley. Over 30 years of trusted expertise in tree care, removal,
+              trimming, and emergency services.
             </p>
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm">

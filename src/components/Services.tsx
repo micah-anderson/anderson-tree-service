@@ -9,6 +9,11 @@ import {
   Trees,
   Timer,
   Wrench,
+  Flame,
+  Search,
+  Leaf,
+  Trash2,
+  Sprout,
 } from "lucide-react";
 
 const primaryServices = [
@@ -34,36 +39,68 @@ const primaryServices = [
       "Health maintenance pruning",
     ],
   },
+  {
+    icon: Scissors,
+    title: "Hedge Trimming & Shaping",
+    description: "Professional hedge maintenance for pristine landscapes",
+    features: [
+      "Precise hedge shaping",
+      "Regular maintenance programs",
+      "Privacy hedge expertise",
+      "Clean and defined edges",
+    ],
+  },
+  {
+    icon: Search,
+    title: "Tree Health Assessments",
+    description: "Expert diagnosis and care recommendations",
+    features: [
+      "Disease identification",
+      "Risk assessment",
+      "Treatment planning",
+      "Preventive care strategies",
+    ],
+  },
 ];
 
 const secondaryServices = [
   {
-    icon: Shovel,
-    title: "Stump Grinding & Removal",
-    description: "Complete stump removal and ground restoration",
+    icon: Sprout,
+    title: "Tree Planting",
+    description: "Professional tree planting for a greener tomorrow",
   },
   {
-    icon: AlertTriangle,
-    title: "Emergency Storm Cleanup",
-    description: "24/7 rapid response for storm damage",
+    icon: Flame,
+    title: "Fire Prevention Services",
+    description: "Reduce fire hazards with strategic vegetation management",
   },
   {
-    icon: Trees,
-    title: "Lot & Land Clearing",
-    description: "Commercial and residential clearing projects",
+    icon: Wrench,
+    title: "Cabling & Bracing",
+    description: "Structural support for vulnerable trees",
   },
 ];
 
 const specialtyServices = [
   {
-    icon: Clipboard,
-    title: "Tree Health Assessment",
-    description: "Expert evaluation and preservation planning",
+    icon: Trees,
+    title: "Wood Chip Mulching",
+    description: "Eco-friendly mulching solutions for your landscape",
   },
   {
-    icon: Wrench,
-    title: "Cabling & Bracing",
-    description: "Support systems for vulnerable trees",
+    icon: Leaf,
+    title: "Tree Preservation & Fertilization",
+    description: "Comprehensive care programs for long-term tree health",
+  },
+  {
+    icon: Trash2,
+    title: "Invasive Plant Removal",
+    description: "Protect your property from harmful invasive species",
+  },
+  {
+    icon: Hammer,
+    title: "Unique Wood Pieces",
+    description: "Custom wood slabs and unique pieces from salvaged trees",
   },
 ];
 
@@ -80,9 +117,12 @@ export default function Services() {
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-3 sm:mb-4">
             Professional Tree Services in Kelowna
           </h2>
-          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-6">
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-4 sm:px-6 mb-4">
             From emergency removals to routine maintenance, we're your trusted
             local experts in comprehensive tree care
+          </p>
+          <p className="text-[#FF6A00] font-semibold text-lg sm:text-xl">
+            We handle all your tree needs!
           </p>
         </header>
 

@@ -16,13 +16,11 @@ export default function Hero() {
   return (
     <section className="relative h-[90vh] flex items-center overflow-hidden">
       {/* Background Image Container */}
-      <div
-        className="absolute inset-0 -z-10"
-        style={{
-          backgroundImage: 'url("Romans_81-5.png")',
-          backgroundSize: "cover",
-          backgroundPosition: "center right",
-        }}
+      <img
+        src="/hero-image.png"
+        alt="Professional Tree Care in Kelowna"
+        className="absolute inset-0 w-full h-full object-cover"
+        style={{ zIndex: -1 }}
       />
 
       {/* Gradient Overlay */}
@@ -51,7 +49,7 @@ export default function Hero() {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 tracking-tight leading-tight text-gray-900">
             Professional Tree Care Services in Kelowna
           </h1>
-          <p className="text-xl mb-8 text-gray-700 leading-relaxed">
+          <p className="text-xl mb-8 text-[#181818] leading-relaxed">
             Proudly serving Kelowna for over 30 years. Expert tree care services
             including tree removal, pruning, tree health and safety inspections,
             and emergency services.

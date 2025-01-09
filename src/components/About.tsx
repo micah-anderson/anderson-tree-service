@@ -4,6 +4,7 @@ import React from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { TreeIcons } from "./icons/TreeIcons";
+import OptimizedImage from "./OptimizedImage";
 
 export default function About() {
   const ref = useRef<HTMLDivElement>(null);
@@ -95,9 +96,9 @@ export default function About() {
           <motion.div className="relative" style={{ y, opacity }}>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/jaden-classic.jpg"
+                src="/about-image.jpg"
                 alt="Professional Tree Care in Kelowna"
-                className="w-full h-full object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
               {/* Overlay Gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
